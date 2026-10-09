@@ -2,9 +2,9 @@
 
 Dashboard comparativ în limba rusă pentru ФОРМА ДЛЯ ОХРАНЫ.
 
-Adresa destinată publicării: https://work.vavgroup.pro
+Site: https://work.vavgroup.pro
 
-Flux de publicare: GitHub Pages din ramura `main`, folderul rădăcină. După activarea Pages și conectarea domeniului, modificările trimise în `main` declanșează automat publicarea.
+Publicarea automată este activată prin GitHub Pages din ramura `main`, folderul rădăcină. Modificările salvate în `main` declanșează automat publicarea. Starea fiecărei publicări se vede în fila `Actions` a repository-ului.
 
 Pagina este autonomă: HTML, stiluri și calculator local, fără biblioteci externe. Ofertele și diferențele de TVA sunt documentate în dashboard. Nu există prognoze sau garanții de rezultate.
 
@@ -17,6 +17,8 @@ Pagina este autonomă: HTML, stiluri și calculator local, fără biblioteci ext
 5. Verificați linkul și calculatorul pe iPhone. Accesul fără VPN se verifică în rețeaua destinatarului.
 
 Pentru actualizarea dashboard-ului actual, modificați `index.html`. Domeniul VAVGROUP principal nu are nevoie de modificări pentru fiecare dashboard.
+
+În interfața GitHub: `Add file` → `Upload files` → selectați pagina și fișierele ei → `Commit changes` în `main`. Păstrați fișierul `CNAME` cu valoarea `work.vavgroup.pro`.
 
 Încărcarea publică o pagină deja pregătită; nu transformă automat ofertele PDF în dashboard. Un repository privat nu garantează că site-ul publicat este privat. Nu publicați parole, date personale sau materiale confidențiale fără acord.
 
