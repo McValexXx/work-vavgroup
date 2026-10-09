@@ -4,7 +4,15 @@ Dashboard comparativ în limba rusă pentru ФОРМА ДЛЯ ОХРАНЫ.
 
 Site: https://work.vavgroup.pro
 
-Publicarea automată este activată prin GitHub Pages din ramura `main`, folderul rădăcină. Modificările salvate în `main` declanșează automat publicarea. Starea fiecărei publicări se vede în fila `Actions` a repository-ului.
+Publicarea automată folosește Cloudflare Pages, proiectul `work-vavgroup`, conectat la ramura `main` din acest repository. Modificările salvate în `main` declanșează publicarea. Starea fiecărei publicări se vede în Cloudflare → Workers & Pages → work-vavgroup → Deployments.
+
+Setări: framework `None`, rădăcină repository, director publicat `dist`. Comanda de construire:
+
+```sh
+mkdir -p dist && cp index.html dist/ && if [ -d dashboards ]; then cp -R dashboards dist/; fi
+```
+
+Comanda publică pagina principală și directorul `dashboards`, inclusiv fișierele paginilor din acesta. Documentația și ofertele originale nu sunt copiate în site. Adresa de rezervă: https://work-vavgroup.pages.dev.
 
 Pagina este autonomă: HTML, stiluri și calculator local, fără biblioteci externe. Ofertele și diferențele de TVA sunt documentate în dashboard. Nu există prognoze sau garanții de rezultate.
 
@@ -18,7 +26,7 @@ Pagina este autonomă: HTML, stiluri și calculator local, fără biblioteci ext
 
 Pentru actualizarea dashboard-ului actual, modificați `index.html`. Domeniul VAVGROUP principal nu are nevoie de modificări pentru fiecare dashboard.
 
-În interfața GitHub: `Add file` → `Upload files` → selectați pagina și fișierele ei → `Commit changes` în `main`. Păstrați fișierul `CNAME` cu valoarea `work.vavgroup.pro`.
+În interfața GitHub: `Add file` → `Upload files` → selectați pagina și fișierele ei → `Commit changes` în `main`. Pentru o pagină nouă, păstrați structura `dashboards/nume-dashboard/` la încărcare. Cloudflare gestionează domeniul separat; fișierul GitHub Pages `CNAME` nu este necesar.
 
 Încărcarea publică o pagină deja pregătită; nu transformă automat ofertele PDF în dashboard. Un repository privat nu garantează că site-ul publicat este privat. Nu publicați parole, date personale sau materiale confidențiale fără acord.
 
